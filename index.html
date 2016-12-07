@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Calcula tu Aguinaldo!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/javascript.js" ></script>
+
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/index.html">Calcula Tu Aguinaldo</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Calcula</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Blog</li></a></li>
+        </ul>
+      </div>      
+    </nav>
+
+    <div class="container-fluid">
+      <h1>Calcula tu aguinaldo aquí</h1>
+    </div>
+
+    <form name="calculaTuAguinaldo" action="#"  onsubmit="calcularAguinaldo()">
+      <div class="form-group">  
+        <label for="completeYear">Trabajaste Todo el Año?</label>
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <input id="completeYear" class="form-check-input" type="checkbox" value=true onchange="checkedIfWorkedAllYear()" checked="true">
+            <p id="checkBoxText">Si</p>
+          </label>
+        </div>
+      </div>
+      <div id="dateDiv" class="form-group" hidden="true">
+        ¿Cuándo comnenzaste a trabajar?
+        <input id="date" type="date" min="2016-01-01">
+      </div>
+      <div>
+        Sueldo Mensual <input id="sueldoMensual" class="input" type="number" min="0" value="5000" required>
+      </div>
+
+        <input class="btn btn-primary" type="submit" value="Calcular" >
+    </form>
+
+    <h1 id="resultado"></h1>
+
+  </body>
+</html>
