@@ -6,9 +6,10 @@
 	// Waits for page to load and calls setDateMaxMin Function//
 	////////////////////////////////////////////////////////////
 
-	if (window.location.href.match('index.html') != null) {
-		window.onload = setDateMaxMin();
+	window.onload = function() {
+  	setDateMaxMin();
 	};
+
 
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -16,24 +17,26 @@
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	function setDateMaxMin(){ 
-		var today = new Date();
-		var dd = today.getDate();
-		var mm = today.getMonth()+1; //January is 0!
-		var yyyy = today.getFullYear();
-		 if(dd<10){
-		        dd='0'+dd
-		    } 
-		    if(mm<10){
-		        mm='0'+mm
-		    } 
 
-		today = yyyy+'-'+mm+'-'+dd;
-		document.getElementById("date").setAttribute("max",today);
+		if (window.location.href.match('car-driving.html') != null) {
+			var today = new Date();
+			var dd = today.getDate();
+			var mm = today.getMonth()+1; //January is 0!
+			var yyyy = today.getFullYear();
+			 if(dd<10){
+			        dd='0'+dd
+			    } 
+			    if(mm<10){
+			        mm='0'+mm
+			    } 
 
-		var firstDay = new Date();
-		firstDay = yyyy +'-01-01';
-		document.getElementById("date").setAttribute("min", firstDay);
+			today = yyyy+'-'+mm+'-'+dd;
+			document.getElementById("date").setAttribute("max",today);
 
+			var firstDay = new Date();
+			firstDay = yyyy +'-01-01';
+			document.getElementById("date").setAttribute("min", firstDay);
+		}
 	}
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
