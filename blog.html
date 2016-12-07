@@ -23,7 +23,7 @@
 
     </script>
 
-    
+
 
   </head>
   <body>
@@ -33,40 +33,16 @@
           <a class="navbar-brand" href="/index.html">Calcula Tu Aguinaldo</a>
         </div>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Calcula</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="blog.html">Blog</li></a></li>
+          <li><a href="index.html">Calcula</a></li>
+          <li><a href="nosotros.html">Nosotros</li></a></li>
+          <li class="active"><a href="blog.html">Blog</a></li>
         </ul>
       </div>      
     </nav>
 
     <div class="container-fluid">
-      <h1>Calcula tu aguinaldo aquí</h1>
+      <h1>Blog</h1>
     </div>
-
-    <form name="calculaTuAguinaldo" action="#"  onsubmit="calcularAguinaldo()">
-      <div class="form-group">  
-        <label for="completeYear">Trabajaste Todo el Año?</label>
-
-        <div class="form-check">
-          <label class="form-check-label">
-            <input id="completeYear" class="form-check-input" type="checkbox" value=true onchange="checkedIfWorkedAllYear()" checked="true">
-            <p id="checkBoxText">Si</p>
-          </label>
-        </div>
-      </div>
-      <div id="dateDiv" class="form-group" hidden="true">
-        ¿Cuándo comnenzaste a trabajar?
-        <input id="date" type="date" min="2016-01-01">
-      </div>
-      <div>
-        Sueldo Mensual <input id="sueldoMensual" class="input" type="number" min="0" value="5000" required>
-      </div>
-
-        <input class="btn btn-primary" type="submit" value="Calcular" >
-    </form>
-
-    <h1 id="resultado"></h1>
 
   </body>
 </html>
