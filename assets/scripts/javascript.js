@@ -68,23 +68,23 @@
 			document.getElementById("resultado").innerHTML = "Sueldo Diario es $" + sueldoDiario.toFixed(2) + " y tu Aguinaldo mínimo por ley es de $" + aguinaldo.toFixed(2)
 		} else {
 			var startedWorking = document.getElementById("date").value.split("-");
-			console.log(startedWorking);
+			// console.log(startedWorking);
 
 			var userStartedDate = new Date(startedWorking[0], startedWorking[1]-1, startedWorking[2]);
-			console.log(userStartedDate);
+			// console.log(userStartedDate);
 
 			var userNextMonth = new Date(startedWorking[0], startedWorking[1], 01);
-			console.log(userNextMonth);
+			// console.log(userNextMonth);
 
 			var daysDifference = (userNextMonth-userStartedDate)/86400000;
-			console.log("Días del primer mes de trabajo: "+daysDifference);
+			// console.log("Días del primer mes de trabajo: "+daysDifference);
 
 			var completeMonthsWorked = 12 - startedWorking[1];
-			console.log("Meses completos trabajdos: "+completeMonthsWorked);
+			// console.log("Meses completos trabajdos: "+completeMonthsWorked);
 
 			if (daysDifference > 30) {
 				daysDifference = 30;
-				console.log("Días del primer mes de trabajo > a 30 por lo que se toma como 30.");
+				// console.log("Días del primer mes de trabajo > a 30 por lo que se toma como 30.");
 			}
 
 			var aguinaldo = (1.25 * completeMonthsWorked + 0.0416667 * daysDifference)*sueldoDiario;
