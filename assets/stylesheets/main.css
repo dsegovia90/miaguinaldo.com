@@ -8,3 +8,10 @@ body {
   text-align: center;
 }
 
+.text-written {
+	max-width: 720px;
+}
+
+form {
+	max-width: 720px;
+}
