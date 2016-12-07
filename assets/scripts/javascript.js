@@ -18,7 +18,7 @@
 
 	function setDateMaxMin(){ 
 
-		if (window.location.href.match('index.html') != null) {
+		if (window.location.href.match('index.html') != null || window.location.href.match('index.html')) {
 			var today = new Date();
 			var dd = today.getDate();
 			var mm = today.getMonth()+1; //January is 0!
