@@ -1,3 +1,13 @@
+// /////////////////////////////////
+// // Form wont redirect on submit//
+// /////////////////////////////////
+
+// $('#calculateForm').submit(function () {
+//  sendContactForm();
+//  return false;
+// });
+
+
 ////////////////////////////////////////////////////////////
 // Waits for page to load and calls setDateMaxMin Function//
 ////////////////////////////////////////////////////////////
@@ -84,5 +94,6 @@ function calcularAguinaldo(){
 		document.getElementById("resultado").innerHTML = "Sueldo Diario es $" + sueldoDiario.toFixed(2) + " y tu Aguinaldo mínimo por ley es de $" + aguinaldo.toFixed(2);
 	}	
 
+	return false;
 }
 
