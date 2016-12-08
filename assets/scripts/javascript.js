@@ -66,7 +66,7 @@
 		var sueldoDiario = sueldoMensual / 30;
 		if (document.getElementById("completeYear").checked) {
 			var aguinaldo = sueldoDiario * 15;
-			document.getElementById("resultado").innerHTML = "Sueldo Diario es $" + sueldoDiario.toFixed(2) + " y tu Aguinaldo mínimo por ley es de $" + aguinaldo.toFixed(2)
+			document.getElementById("resultado").innerHTML = "Sueldo Diario es $" + sueldoDiario.toFixed(2) + " y tu Aguinaldo mínimo por ley es de <strong>$" + aguinaldo.toFixed(2) + ".</strong>";
 		} else {
 			var startedWorking = document.getElementById("date").value.split("-");
 			console.log(startedWorking);
@@ -89,8 +89,7 @@
 		
 
 			var aguinaldo = (15/daysInThisYear*daysWorkedInThisYear*sueldoDiario);
-			document.getElementById("resultado").innerHTML = "Sueldo Diario es $" + sueldoDiario.toFixed(2) + " y tu Aguinaldo mínimo por ley es de ";
-			document.getElementById("resultado-strong").innerHTML = "$" + aguinaldo.toFixed(2).toBold();
+			document.getElementById("resultado").innerHTML = "Sueldo Diario es $" + sueldoDiario.toFixed(2) + " y tu Aguinaldo mínimo por ley es de <strong>$" + aguinaldo.toFixed(2) + ".</strong>";
 		}	
 
 		return false;
