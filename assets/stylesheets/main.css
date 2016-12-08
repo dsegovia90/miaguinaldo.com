@@ -21,10 +21,16 @@ input {
 	margin-bottom: 20px;
 }
 
-.btn {
-	margin: 20px;
+input.btn {
+	margin-bottom: 20px;
 }
 
 #calculate-form {
 	max-width: 420px;
+	padding-bottom: 10px;
+}
+
+.result {
+	max-width: 420px;
+	padding-top: 10px;
 }
