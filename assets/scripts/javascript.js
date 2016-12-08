@@ -69,26 +69,26 @@
 			document.getElementById("resultado").innerHTML = "Sueldo Diario es $" + sueldoDiario.toFixed(2) + " y tu Aguinaldo mínimo por ley es de $" + aguinaldo.toFixed(2)
 		} else {
 			var startedWorking = document.getElementById("date").value.split("-");
-			// console.log(startedWorking);
+			console.log(startedWorking);
 
 			var userStartedDate = new Date(startedWorking[0], startedWorking[1]-1, startedWorking[2]);
-			// console.log(userStartedDate);
+			console.log("Fecha de inicio: "+userStartedDate);
 
-			var userNextMonth = new Date(startedWorking[0], startedWorking[1], 01);
-			// console.log(userNextMonth);
+			var nextJanuaryFirst = new Date(startedWorking[0], 00, 01);
+			nextJanuaryFirst.setFullYear(nextJanuaryFirst.getFullYear()+1);
+			console.log("Next January 1st: "+nextJanuaryFirst);
 
-			var daysDifference = (userNextMonth-userStartedDate)/86400000;
-			// console.log("Días del primer mes de trabajo: "+daysDifference);
+			var daysWorkedInThisYear = (nextJanuaryFirst-userStartedDate)/86400000;
+			console.log("Días trabajados en el año: "+daysWorkedInThisYear);
 
-			var completeMonthsWorked = 12 - startedWorking[1];
-			// console.log("Meses completos trabajdos: "+completeMonthsWorked);
+			var firstDayOfTheYear = new Date(startedWorking[0],00,01);
+			console.log("First Day of the Current Year: "+firstDayOfTheYear);
 
-			if (daysDifference > 30) {
-				daysDifference = 30;
-				// console.log("Días del primer mes de trabajo > a 30 por lo que se toma como 30.");
-			}
+			var daysInThisYear = (nextJanuaryFirst-firstDayOfTheYear)/86400000;
+			console.log("Days in Current Year: "+daysInThisYear);
+		
 
-			var aguinaldo = (1.25 * completeMonthsWorked + 0.0416667 * daysDifference)*sueldoDiario;
+			var aguinaldo = (15/daysInThisYear*daysWorkedInThisYear*sueldoDiario);
 			document.getElementById("resultado").innerHTML = "Sueldo Diario es $" + sueldoDiario.toFixed(2) + " y tu Aguinaldo mínimo por ley es de $" + aguinaldo.toFixed(2);
 		}	
 
