@@ -18,7 +18,7 @@
 
 	function setDateMaxMin(){ 
 
-		if (window.location.href.match('index.html') != null || window.location.href.match('')) {
+		if (window.location.href.match('index.html') != null || window.location.href.match('') != null) {
 			var today = new Date();
 			var dd = today.getDate();
 			var mm = today.getMonth()+1; //January is 0!
@@ -46,13 +46,14 @@
 
 	function checkedIfWorkedAllYear(){
 		if (document.getElementById("completeYear").checked) {
-			//document.write("Test if checked is true!");
+			// document.write("Test if checked is true!");
 			document.getElementById("checkBoxText").innerHTML = 'Si';
 			document.getElementById("dateDiv").hidden = true;
+			document.getElementById("date").removeAttribute("required");
 		} else {
 			document.getElementById("checkBoxText").innerHTML = 'No';
 			document.getElementById("dateDiv").hidden = false;
-
+			document.getElementById("date").setAttribute("required", "");
 		}
 	}
 
