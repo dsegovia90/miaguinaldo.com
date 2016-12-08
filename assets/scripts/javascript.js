@@ -45,17 +45,34 @@
 
 
 	function checkedIfWorkedAllYear(){
-		if (document.getElementById("completeYear").checked) {
-			// document.write("Test if checked is true!");
-			document.getElementById("checkBoxText").innerHTML = 'Si';
-			document.getElementById("dateDiv").hidden = true;
-			document.getElementById("date").removeAttribute("required");
-		} else {
-			document.getElementById("checkBoxText").innerHTML = 'No';
-			document.getElementById("dateDiv").hidden = false;
+		if ($( "#date-div" ).is( ":hidden" )) {
+			document.getElementById("btn-worked").removeAttribute("class", "btn-success");
+			document.getElementById("btn-worked").setAttribute("class", "btn btn-default");
+			document.getElementById("btn-worked").innerHTML = "No";
 			document.getElementById("date").setAttribute("required", "");
+			return false;
+		} else {
+			document.getElementById("btn-worked").removeAttribute("class", "btn-default");
+			document.getElementById("btn-worked").setAttribute("class", "btn btn-success");
+			document.getElementById("btn-worked").innerHTML = "Si";
+			document.getElementById("date").removeAttribute("required");
+			return false;
 		}
 	}
+
+
+
+		// if (document.getElementById("completeYear").checked) {
+		// 	// document.write("Test if checked is true!");
+		// 	document.getElementById("checkBoxText").innerHTML = 'Si';
+		// 	document.getElementById("dateDiv").hidden = true;
+		// 	document.getElementById("date").removeAttribute("required");
+		// } else {
+		// 	document.getElementById("checkBoxText").innerHTML = 'No';
+		// 	document.getElementById("dateDiv").hidden = false;
+		// 	document.getElementById("date").setAttribute("required", "");
+		// }
+	// }
 
 	////////////////////////////////////////////
 	// This function calculates the aguinaldo.//
@@ -64,7 +81,7 @@
 	function calcularAguinaldo(){
 		var sueldoMensual = document.getElementById("sueldoMensual").value;
 		var sueldoDiario = sueldoMensual / 30;
-		if (document.getElementById("completeYear").checked) {
+		if ($( "#date-div" ).is( ":hidden" )) {
 			var aguinaldo = sueldoDiario * 15;
 			document.getElementById("resultado").innerHTML = "Sueldo Diario es $" + sueldoDiario.toFixed(2) + " y tu Aguinaldo mínimo por ley es de <strong>$" + aguinaldo.toFixed(2) + ".</strong>";
 		} else {
@@ -94,5 +111,7 @@
 
 		return false;
 	}
+
+	
 
 // });

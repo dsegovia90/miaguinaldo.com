@@ -3,8 +3,6 @@ body {
   color: #ccdbe5;
 }
 
-
-
 .text-written {
 	max-width: 720px;
 }
@@ -23,13 +21,16 @@ input {
 	margin-bottom: 20px;
 }
 
+#btn-worked {
+	width: 76.96px;
+}
+
 input.btn {
 	margin-bottom: 20px;
 }
 
 label {
 	font-weight: normal;
-
 }
 
 #calculate-form{
@@ -44,4 +45,8 @@ label {
 
 .aviso {
 	max-width: 420px;
+}
+
+#aviso-texto {
+	margin-top: 20px;
 }
