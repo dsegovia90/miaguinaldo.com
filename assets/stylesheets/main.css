@@ -1,7 +1,9 @@
 body {
-  background: #293f50;
+  background: #ccdbe5;
   color: #888;
 }
+
+
 
 .text-written {
 	max-width: 720px;
@@ -23,6 +25,11 @@ input {
 
 input.btn {
 	margin-bottom: 20px;
+}
+
+label {
+	font-weight: normal;
+
 }
 
 #calculate-form {

@@ -89,7 +89,8 @@
 		
 
 			var aguinaldo = (15/daysInThisYear*daysWorkedInThisYear*sueldoDiario);
-			document.getElementById("resultado").innerHTML = "Sueldo Diario es $" + sueldoDiario.toFixed(2) + " y tu Aguinaldo mínimo por ley es de $" + aguinaldo.toFixed(2);
+			document.getElementById("resultado").innerHTML = "Sueldo Diario es $" + sueldoDiario.toFixed(2) + " y tu Aguinaldo mínimo por ley es de ";
+			document.getElementById("resultado-strong").innerHTML = "$" + aguinaldo.toFixed(2).toBold();
 		}	
 
 		return false;
