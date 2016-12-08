@@ -66,7 +66,7 @@
 		var sueldoDiario = sueldoMensual / 30;
 		if ($( "#date-div" ).is( ":hidden" )) {
 			var aguinaldo = sueldoDiario * 15;
-			document.getElementById("resultado").innerHTML = "Sueldo Diario es $" + sueldoDiario.toFixed(2) + " y tu Aguinaldo mínimo por ley es de <strong>$" + aguinaldo.toFixed(2) + ".</strong> antes de impuestos y deducciones.";
+			document.getElementById("resultado").innerHTML = "Sueldo Diario es $" + sueldoDiario.toFixed(2) + " y tu Aguinaldo mínimo por ley es de <strong>$" + aguinaldo.toFixed(2) + "</strong> antes de impuestos y deducciones.";
 		} else {
 			var startedWorking = document.getElementById("date").value.split("-");
 			console.log(startedWorking);

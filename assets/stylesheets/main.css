@@ -43,6 +43,10 @@ label {
 	padding-top: 10px;
 }
 
+#resultado strong {
+	font-size: 125%;
+}
+
 .aviso {
 	max-width: 420px;
 }
