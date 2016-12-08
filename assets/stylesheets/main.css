@@ -32,7 +32,7 @@ label {
 
 }
 
-#calculate-form {
+#calculate-form{
 	max-width: 420px;
 	padding-bottom: 10px;
 }
@@ -40,4 +40,8 @@ label {
 .result {
 	max-width: 420px;
 	padding-top: 10px;
+}
+
+.aviso {
+	max-width: 420px;
 }
