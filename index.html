@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Calcula tu Aguinaldo!</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -28,24 +28,31 @@
   </head>
   <body>
     
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-static-top">
       <div class="container-fluid">
         <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
           <a class="navbar-brand" href="index.html">Calcula Tu Aguinaldo</a>
         </div>
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Calcula</a></li>
-          <li><a href="info.html">Info</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-        </ul>
+        <div class="collapse navbar-collapse" id="myNavbar"> 
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html">Calcula</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+          </ul>
+        </div>
       </div>      
     </nav>
 
-    <div class="container-fluid">
+    <div class="container text-center">
       <h1>Calcula tu aguinaldo aquí</h1>
     </div>
 
-    <form id="calculateForm" class="container" name="calculaTuAguinaldo"  onsubmit="return calcularAguinaldo();" action="">
+    <form id="calculate-form" class="container text-center" name="calculaTuAguinaldo"  onsubmit="return calcularAguinaldo();" action="">
       <div class="form-group">  
         <label for="completeYear">Trabajaste Todo el Año?</label>
 
@@ -58,10 +65,10 @@
       </div>
       <div id="dateDiv" class="form-group" hidden="true">
         ¿Cuándo comnenzaste a trabajar?
-        <input id="date" class="form-control" type="date" min="" required="true">
+        <input id="date" class="form-control text-center" type="date" min="" required="true">
       </div>
       <div>
-        Sueldo Mensual <input id="sueldoMensual" class="form-control" class="input" type="number" min="0" value="5000" required>
+        Sueldo Mensual <input id="sueldoMensual" class="form-control text-center" class="input" type="number" min="0" value="5000" required>
       </div>
 
       <input class="btn btn-primary" type="submit" value="Calcular" >
