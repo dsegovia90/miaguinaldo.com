@@ -89,8 +89,8 @@
 			var aguinaldo = (15/daysInThisYear*daysWorkedInThisYear*sueldoDiario);
       
 		}	
-			document.getElementById("h-resultado").innerHTML = "$" + aguinaldo.toFixed(2);
-			document.getElementById("p-resultado").innerHTML = "Sueldo Diario es $" + sueldoDiario.toFixed(2) + " y tu Aguinaldo mínimo por ley es de <strong>$" + aguinaldo.toFixed(2) + ".</strong> antes de impuestos y deducciones.";
+			// document.getElementById("h-resultado").innerHTML = "$" + aguinaldo.toFixed(2);
+			document.getElementById("p-resultado").innerHTML = "Sueldo Diario es $" + sueldoDiario.toFixed(2) + " y tu Aguinaldo mínimo por ley es de <u><strong>$" + aguinaldo.toFixed(2) + "</strong></u> antes de impuestos y deducciones.";
       $("#result-jumbotron").collapse('show');
 
 		return false;
