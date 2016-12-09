@@ -23,6 +23,7 @@ input {
 
 #btn-worked {
 	width: 76.96px;
+	margin-bottom: 15px;
 }
 
 input.btn {
@@ -38,6 +39,12 @@ label {
 	padding-bottom: 10px;
 }
 
+.no-spin::-webkit-inner-spin-button, .no-spin::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+  -moz-appearance:textfield !important;
+}
+
 .result {
 	max-width: 420px;
 	padding-top: 10px;
@@ -45,6 +52,14 @@ label {
 
 #resultado strong {
 	font-size: 125%;
+}
+
+.jumbotron {
+	background-color: #293f50;
+	padding: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 0;
 }
 
 .aviso {

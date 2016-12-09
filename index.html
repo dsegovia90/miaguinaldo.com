@@ -49,7 +49,9 @@
     </nav>
 
     <div class="container-fluid text-center">
-      <h1>Calcula tu aguinaldo aquí</h1>
+      <div class="jumbotron">
+        <h1>Calcula tu aguinaldo aquí</h1>
+      </div>
     </div>
 
     <form id="calculate-form" class="container text-center" name="calculaTuAguinaldo"  onsubmit="return calcularAguinaldo();" action="">
@@ -57,7 +59,7 @@
         
         <!-- Button to hide and show date started working this year! -->
           <div class="col">
-            <label for="btn-worked">Trabajaste Todo el Año?</label>
+            <label for="btn-worked">¿Trabajaste Todo el Año?</label>
           </div>
           <div>
             <button id="btn-worked" class="btn btn-success" data-toggle="collapse" data-target="#date-div" onclick="return checkedIfWorkedAllYear();">Si</button>   
@@ -69,26 +71,30 @@
       <!-- Date! -->
       <div id="date-div" class="form-group collapse">
         ¿Cuándo comenzaste a trabajar?
-        <input id="date" class="form-control text-center" type="date" min="">
+        <input id="date" class="form-control text-center no-spin" type="date" min="">
       </div>
       <!-- Date End! -->
 
+      <!-- Sueldo Mensual! -->
       <div>
-        Sueldo Mensual <input id="sueldoMensual" class="form-control text-center" class="input" type="number" min="0" value="5000" required>
+        Sueldo Mensual <input id="sueldoMensual" class="form-control text-center no-spin" class="input" type="number" min="0" step="0.01" value="5000" required>
       </div>
+      <!-- Sueldo Mensual End! -->
 
       <input class="btn btn-primary" type="submit" value="Calcular" >
     </form>
 
     <div class="container text-written result">
-      <p id="resultado"></p>
+      <div id="result-jumbotron" class="jumbotron collapse">
+        <h2  class="text-center"><strong id="h-resultado"></strong></h2>
+        <p id="p-resultado"></p>
+      </div>
     </div>
     
     <div class="aviso container text-center">
       <button class="toggle btn btn-default" data-toggle="collapse" data-target="#aviso-texto">Aviso Importante</button>
       <p id="aviso-texto" class="collapse">Los materiales contenidos en esta página web han sido incluidos a mero título informativo, por lo que resultan insuficientes para tomar decisiones o asumir posiciones en un caso concreto. No constituyen asesoramiento o servicio profesional sobre ningún asunto en particular.</p>
     </div>
-
 
   </body>
 </html>
