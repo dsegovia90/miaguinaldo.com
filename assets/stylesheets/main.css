@@ -71,7 +71,7 @@ label {
 }
 
 input[type=date] {
-    /*display:block;*/
+    display:block;
     -webkit-appearance:button;
     -moz-appearance:button;
     appearance:button;
