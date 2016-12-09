@@ -71,6 +71,7 @@ label {
 }
 
 input[type=date] {
+		vertical-align: center;
     display:block;
     -webkit-appearance:button;
     -moz-appearance:button;
