@@ -69,3 +69,10 @@ label {
 #aviso-texto {
 	margin-top: 20px;
 }
+
+input[type=date] {
+    display:block;
+    -webkit-appearance:button;
+    -moz-appearance:button;
+    appearance:button;
+}
