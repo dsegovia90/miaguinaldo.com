@@ -36,23 +36,38 @@
 		}
 	}
 
+
+
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// This function checks for the button value and makes date attribute required accordingly and changes button color and inner HTML.//
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+			function buttonSwitchLeft() {
+		  	document.getElementById("btn-worked-yes").setAttribute("class", "btn btn-primary btn-worked active");
+		  	document.getElementById("btn-worked-no").setAttribute("class", "btn btn-primary btn-worked");
+				document.getElementById("date").removeAttribute("required");
+		  	$("#date-div").collapse('hide');
+		  	return false;				
+			}
+
+			function buttonSwitchRight() {
+				document.getElementById("btn-worked-no").setAttribute("class", "btn btn-primary btn-worked active");
+				document.getElementById("btn-worked-yes").setAttribute("class", "btn btn-primary btn-worked");
+				document.getElementById("date").setAttribute("required", "");		
+		  	$("#date-div").collapse('show');
+		  	return false;				
+			}
+
+		   
+
+
+
 
 	function checkedIfWorkedAllYear(){
+
 		if ($( "#date-div" ).is( ":hidden" )) {
-			document.getElementById("btn-worked").removeAttribute("class", "btn-success");
-			document.getElementById("btn-worked").setAttribute("class", "btn btn-default");
-			document.getElementById("btn-worked").innerHTML = "No";
-			document.getElementById("date").setAttribute("required", "");
 			return false;
 		} else {
-			document.getElementById("btn-worked").removeAttribute("class", "btn-default");
-			document.getElementById("btn-worked").setAttribute("class", "btn btn-success");
-			document.getElementById("btn-worked").innerHTML = "Si";
-			document.getElementById("date").removeAttribute("required");
 			return false;
 		}
 	}
