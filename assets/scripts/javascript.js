@@ -42,21 +42,21 @@
 	// This function checks for the button value and makes date attribute required accordingly and changes button color and inner HTML.//
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-			function buttonSwitchLeft() {
-		  	document.getElementById("btn-worked-yes").setAttribute("class", "btn btn-primary btn-worked active");
-		  	document.getElementById("btn-worked-no").setAttribute("class", "btn btn-primary btn-worked");
-				document.getElementById("date").removeAttribute("required");
-		  	$("#date-div").collapse('hide');
-		  	return false;				
-			}
+	function buttonSwitchLeft() {
+		document.getElementById("btn-worked-yes").setAttribute("class", "btn btn-primary btn-worked active");
+		document.getElementById("btn-worked-no").setAttribute("class", "btn btn-primary btn-worked");
+		document.getElementById("date").removeAttribute("required");
+		$("#date-div").collapse('hide');
+		return false;				
+	}
 
-			function buttonSwitchRight() {
-				document.getElementById("btn-worked-no").setAttribute("class", "btn btn-primary btn-worked active");
-				document.getElementById("btn-worked-yes").setAttribute("class", "btn btn-primary btn-worked");
-				document.getElementById("date").setAttribute("required", "");		
-		  	$("#date-div").collapse('show');
-		  	return false;				
-			}
+	function buttonSwitchRight() {
+		document.getElementById("btn-worked-no").setAttribute("class", "btn btn-primary btn-worked active");
+		document.getElementById("btn-worked-yes").setAttribute("class", "btn btn-primary btn-worked");
+		document.getElementById("date").setAttribute("required", "");		
+		$("#date-div").collapse('show');
+		return false;				
+	}
 
 		   
 
