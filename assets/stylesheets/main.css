@@ -21,11 +21,20 @@ input {
 	margin-bottom: 20px;
 }
 
-#btn-worked {
+.btn-worked {
 	width: 76.96px;
 	margin-bottom: 15px;
 }
 
+#btn-worked-yes {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+#btn-worked-no {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
 input.btn {
 	margin-bottom: 20px;
 }
