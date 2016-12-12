@@ -38,38 +38,24 @@
 
 
 
-	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// This function checks for the button value and makes date attribute required accordingly and changes button color and inner HTML.//
-	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// This function make the functionallity of the switch buttons for the Trabajando todo el año question.//
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	function buttonSwitchLeft() {
-		document.getElementById("btn-worked-yes").setAttribute("class", "btn btn-primary btn-worked active");
-		document.getElementById("btn-worked-no").setAttribute("class", "btn btn-primary btn-worked");
-		document.getElementById("date").removeAttribute("required");
+	function buttonSwitchLeft(clickedButton, otherButton, requiredId) {
+		document.getElementById(clickedButton).setAttribute("class", "btn btn-primary btn-worked active");
+		document.getElementById(otherButton).setAttribute("class", "btn btn-primary btn-worked");
+		document.getElementById(requiredId).removeAttribute("required");
 		$("#date-div").collapse('hide');
 		return false;				
 	}
 
-	function buttonSwitchRight() {
-		document.getElementById("btn-worked-no").setAttribute("class", "btn btn-primary btn-worked active");
-		document.getElementById("btn-worked-yes").setAttribute("class", "btn btn-primary btn-worked");
-		document.getElementById("date").setAttribute("required", "");		
+	function buttonSwitchRight(clickedButton, otherButton, requiredId) {
+		document.getElementById(clickedButton).setAttribute("class", "btn btn-primary btn-worked active");
+		document.getElementById(otherButton).setAttribute("class", "btn btn-primary btn-worked");
+		document.getElementById(requiredId).setAttribute("required", "");		
 		$("#date-div").collapse('show');
 		return false;				
-	}
-
-		   
-
-
-
-
-	function checkedIfWorkedAllYear(){
-
-		if ($( "#date-div" ).is( ":hidden" )) {
-			return false;
-		} else {
-			return false;
-		}
 	}
 
 	////////////////////////////////////////////

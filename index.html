@@ -62,8 +62,8 @@
             <label for="btn-worked">¿Trabajaste Todo el Año?</label>
           </div>
           <div class="col">
-            <button id="btn-worked-yes" class="btn btn-primary btn-worked active" onclick="return buttonSwitchLeft();">Si</button><!--
-        --><button id="btn-worked-no" class="btn btn-primary btn-worked" onclick="return buttonSwitchRight();">No</button>   
+            <button id="btn-worked-yes" class="btn btn-primary btn-worked active" onclick="return buttonSwitchLeft(this.id,'btn-worked-no','date');">Si</button><!--
+        --><button id="btn-worked-no" class="btn btn-primary btn-worked" onclick="return buttonSwitchRight(this.id,'btn-worked-yes','date');">No</button>   
           </div>
         <!-- Button to hide and show date started working this year End! -->
 
